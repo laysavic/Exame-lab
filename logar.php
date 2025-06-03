@@ -8,18 +8,7 @@ if (isset($_POST['email'], $_POST['senha'])) {
     $email = trim($_POST['email']);
     $senha = trim($_POST['senha']);
 
-    if(empty($email)){
-        $_SESSION['mensagemErro'] = "Preencha seu email!";
-        header("Location: index.php");
-        exit;
-    } 
-    
-    if(empty($senha)){
-        $_SESSION['mensagemErro'] = "Preencha sua senha!";
-        header("Location: index.php");
-        exit;
-    }
-
+   
     $sql = "SELECT * FROM usuarios WHERE email = :email";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':email' => $email]);
