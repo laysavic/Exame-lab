@@ -1,3 +1,6 @@
+<?php
+ session_start();?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,12 +8,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exame Lab</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    
 </head>
 
 <body>
-    <div class="container">
-    <div class="left-side">
+ <?php
+ 
+if (isset($_SESSION['mensagemErro'])) {
+    echo "<div class='style'>" . $_SESSION['mensagemErro'] . "</div>";
+    unset($_SESSION['mensagemErro']);
+}
+
+
+if (isset($_GET['erro']) && $_GET['erro'] == 1) {
+    echo"<div class= 'style' >
+            <strong>Erro:</strong> Email ou senha incorretos.
+          </div>";
+  }
+
+if (isset($_GET['erro']) && $_GET['erro'] == 2) {
+        echo "<p class='mensagem-erro'>Essa conta não existe, faça login novamente.</p>";
+    }
+
+  ?>
+  
+
+<div class="container">
+  <div class="left-side">
       <img src="img/logo.png" alt="Exame Lab" class="logo">
     </div>
     <div class="right-side">

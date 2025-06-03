@@ -5,13 +5,27 @@
   font-family: sans-serif;
 }
 
-body, html {
+body {
     height: 100%;
 }
 
 .container {
     display: flex;
     height: 100vh;
+}
+
+.container02{
+    color: #721c24;
+    padding: 35px;
+}
+
+.style{
+    background-color: #f8d7da; 
+    color: #721c24; 
+    padding: 10px; 
+    border: 1px solid #f5c6cb; 
+    border-radius: 5px; 
+    margin-bottom: 4px;
 }
 
 
@@ -98,7 +112,7 @@ input {
 }
 
 .btn :hover{
-    background-color: rgb(248, 238, 246);
+    background-color: #f8eef6;
     color: #5c0028;
 }
 
