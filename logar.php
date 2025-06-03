@@ -7,7 +7,7 @@ $pdo = conectar();
 if (isset($_POST['email'], $_POST['senha'])) {
     $email = trim($_POST['email']);
     $senha = trim($_POST['senha']);
-
+}
    
     $sql = "SELECT * FROM usuarios WHERE email = :email";
     $stmt = $pdo->prepare($sql);
