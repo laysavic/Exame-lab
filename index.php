@@ -27,7 +27,9 @@ if (isset($_GET['erro']) && $_GET['erro'] == 1) {
   }
 
 if (isset($_GET['erro']) && $_GET['erro'] == 2) {
-        echo "<p class='mensagem-erro'>Essa conta não existe, faça login novamente.</p>";
+        echo "<div class= 'style'> 
+                  <p class='mensagem-erro'>Essa conta não existe, faça login novamente.</p>
+                </div>";
     }
 
   ?>
