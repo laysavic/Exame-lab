@@ -14,15 +14,20 @@ if (isset($_POST['email'], $_POST['senha'])) {
     $stmt->execute([':email' => $email]);
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if($usuario && password_verify($senha, $usuario['senha'])){
-        $_SESSION['usuario'] = $usuario['id'];
-        header("Location: dashboard.php");
-        exit;
-
-    } else{
-        header("Location: index.php?erro=1");
-        exit;
+    if ($usuario){
+        if(password_verify($senha, $usuario['senha'])){
+            $_SESSION['usuario'] = $usuario['id'];
+            header("Location: dashboard.php");
+            exit;
+        } else {
+            header("Location: index.php?erro=1");
+            exit;
+        }
+        
+    } else {
+            header("Location: index.php?erro=2");
+            exit;
     }
-    
+
     
 ?>
