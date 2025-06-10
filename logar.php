@@ -9,9 +9,9 @@ if (isset($_POST['email'], $_POST['senha'])) {
     $senha = trim($_POST['senha']);
 }
 
-    $sql = "SELECT * FROM usuarios WHERE email = :email";
+    $sql = "SELECT * FROM usuarios WHERE email = :email99";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([':email' => $email]);
+    $stmt->execute([':email99' => $email]);
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($usuario){
