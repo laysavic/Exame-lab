@@ -7,32 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="cadastro">
-    </div>
-    
+    <div class="cadastro">
       <div class="register-box">
         <img src="img/login.png" alt="" class="user-icon">
-        <h2>CADASTRO</h2>
-        <form class="form" action="logar.php" method="POST">
-        <div class="input-cad">
-          <label for="usuario">usuário:</label>
-          <input type="name" id="usuario" name="usuario"  placeholder="Ex: usuario"   required>
+            <h2>CADASTRO</h2>
+                <form class="form" action="logar.php" method="POST">
+                    <div class="input-cad">
+                        <label for="usuario">usuário:</label>
+                        <input type="name" id="usuario" name="usuario"  placeholder="Ex: usuario"   required>
           
-          <label for="email">e-mail:</label>
-          <input type="email" id="email" name="email"  placeholder="Ex: usuario@gmail.com"   required>
+                        <label for="email">e-mail:</label>
+                        <input type="email" id="email" name="email"  placeholder="Ex: usuario@gmail.com"   required>
           
-          <label for="senha">senha:</label>
-          <input type="password" id="senha" name="senha"  placeholder="Ex: 12345678" required>
+                        <label for="senha">senha:</label>
+                        <input type="password" id="senha" name="senha"  placeholder="Ex: 12345678" required>
           
         </div>
-
-
+        
         <div class=" btn" >
             <button type="submit" >CADASTRAR</button>
         </div>
-        </div>
         
+
+        <div class="link-login">
+            <p>Já possui uma conta? <a href="index.php">Faça login</a></p>
+        </div>
+    </div>
+         </form>
     </div>
 </body>
 </html>
