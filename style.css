@@ -116,6 +116,8 @@ input {
     color: #5c0028;
 }
 
+
+
 .footer {
     color: #fff;
     position: absolute;
@@ -157,17 +159,17 @@ input {
   display: block;
 }
 
-.link-login{
+.link-conta{
     margin-top: 10px;
     font-size: 14px;
 }
 
-.link-login a {
+.link-conta a {
     color: #5c0028;
     text-decoration: none;
     font-weight: bold;
 }
 
-.link-login a:hover{
+.link-conta a:hover{
     text-decoration: underline;
 }

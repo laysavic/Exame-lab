@@ -29,7 +29,7 @@
         </div>
         
 
-        <div class="link-login">
+        <div class="link-conta">
             <p>Já possui uma conta? <a href="index.php">Faça login</a></p>
         </div>
     </div>

@@ -57,7 +57,9 @@ if (isset($_GET['erro']) && $_GET['erro'] == 2) {
         <div class=" btn" >
             <button type="submit" >ENTRAR</button>
         </div>
-
+            <div class="link-conta">
+            <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
+        </div>
         </form>
        
       </div>
@@ -65,6 +67,7 @@ if (isset($_GET['erro']) && $_GET['erro'] == 2) {
   </div>
   <div class="footer">
     <footer>&copy; Exame Lab 2025</footer>
+    
 </div>
         
 </body>
