@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +11,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <?php
+ 
+if (isset($_SESSION['mensagemErro'])) {
+    echo "<div class='style'>" . $_SESSION['mensagemErro'] . "</div>";
+    unset($_SESSION['mensagemErro']);
+}
+  ?>
+  
+
+
     <div class="cadastro">
       <div class="register-box">
         <img src="img/login.png" alt="" class="user-icon">
             <h2>CADASTRO</h2>
-                <form class="form" action="logar.php" method="POST">
+                <form class="form" action="cadastrar.php" method="POST">
                     <div class="input-cad">
                         <label for="usuario">usuário:</label>
                         <input type="name" id="usuario" name="usuario"  placeholder="Ex: usuario"   required>
