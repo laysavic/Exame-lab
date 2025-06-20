@@ -12,11 +12,43 @@ include_once "security.php";
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container02">
+    <!-- <div class="container02">
         <h1>Bem-Vindo(a) a Exame lab!</h1>
         <p>Você logou com sucesso.</p>
         <a href="logout.php">Sair</a>
 
     </div>
+
+    <div class="top-bar">
+  <div class="logo">EXAME LAB</div>
+  <nav>
+    <a href="listar_agendamentos.php">Agendamentos</a>
+    <a href="cadastro.php">Cadastre-se</a>
+    <a href="login.php" class="login-btn">Login</a>
+  </nav>
+</div> -->
+
+<div class="container">
+  <aside class="sidebar">
+    <div class="user">
+      <i class="fa fa-user-circle"></i> Usuário
+    </div>
+    <a href="list_agend.php">📅 Agendamentos</a>
+  </aside>
+
+  <main class="content">
+    <div class="exame-select">
+      <button>Tipo do exame</button>
+    </div>
+
+    <div class="calendar">
+      <!-- Aqui pode entrar o calendário estilizado -->
+      <input type="date" />
+    </div>
+
+    <button class="confirmar-btn">Confirmar</button>
+  </main>
+</div>
+
 </body>
 </html>

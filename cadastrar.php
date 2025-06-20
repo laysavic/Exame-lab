@@ -4,30 +4,33 @@ session_start();
 
 $pdo = conectar();
 
+$nome = trim($_POST['nome']);
+$email = trim($_POST['email']);
+$senha = trim($_POST['senha']);
 
-    $usuario = trim($_POST['usuario']);
-    $email = trim($_POST['email']);
-    $senha = trim($_POST['senha']);
+$senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 
+try {
+    $verifica = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
+    $verifica->execute([$email]);
 
-    $sql = "SELECT * FROM usuarios WHERE email = :email";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([':email' => $email]);
-    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if ($usuario){
-        if(password_verify($senha, $usuario['senha'])){
-            $_SESSION['usuario'] = $usuario['id'];
-            header("Location: dashboard.php");
-            exit;
-        } else {
-            header("Location: index.php?erro=1");
-            exit;
-        }
-        
-    } else {
-            header("Location: index.php?erro=2");
-            exit;
+    if ($verifica->rowCount() > 0) {
+        $_SESSION['mensagemErro'] = "Este e-mail já está cadastrado!";
+        header("Location: cadastro.php");
+        exit;
     }
 
-?>
+    
+    $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$nome, $email, $senhaCriptografada]);
+
+    $_SESSION['mensagemSucesso'] = "Cadastro realizado com sucesso!";
+    header("Location: cadastro.php");
+    exit;
+} catch (PDOException $e) {
+    $_SESSION['mensagemErro'] = "Erro ao cadastrar: " . $e->getMessage();
+    header("Location: cadastro.php");
+    exit;
+}
+

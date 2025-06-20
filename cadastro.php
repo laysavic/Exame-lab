@@ -17,7 +17,13 @@ if (isset($_SESSION['mensagemErro'])) {
     echo "<div class='style'>" . $_SESSION['mensagemErro'] . "</div>";
     unset($_SESSION['mensagemErro']);
 }
-  ?>
+
+
+if (isset($_SESSION['mensagemSucesso'])) {
+echo "<div class='style'>" . $_SESSION['mensagemSucesso'] . "</div>";
+  unset($_SESSION['mensagemSucesso']);
+}
+ ?>
   
 
 
@@ -49,5 +55,9 @@ if (isset($_SESSION['mensagemErro'])) {
     </div>
          </form>
     </div>
+    <div class="footer">
+    <footer>&copy; Exame Lab 2025</footer>
+    
+</div>
 </body>
 </html>
