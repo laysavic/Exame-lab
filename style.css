@@ -175,3 +175,95 @@ input {
 }
 
 
+/* body {
+  background: #f8e4e9;
+  font-family: Arial, sans-serif;
+}
+
+.top-bar {
+  background: #540021;
+  color: white;
+  padding: 8px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar nav{
+    margin-left: 8px;
+}
+
+.sidebar {
+  background: #77003c;
+  color: white;
+  width: 200px;
+  padding: 20px;
+  float: left;
+  height: 100vh;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 30px;
+}
+
+.confirmar-btn {
+  background-color: #540021;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.confirmar-btn:hover{
+    background-color: #fffbfb;
+    color: #540021;
+    border-color: #540021;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f5f9ff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #e8f0fe;
+}
+.botao {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.botao:hover {
+    background-color: #0056b3;
+}
+input, button {
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+button:hover {
+    background-color: #218838;
+}
