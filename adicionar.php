@@ -52,6 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label>Telefone:</label><br>
     <input type="text" name="telefone" required>
 
-    <button type="submit">Salvar</button>
+    <button type="submit" class="salvar">Salvar</button>
 </form>
 

@@ -210,7 +210,25 @@ input {
 .btn-add:hover {
     background-color: #fff;
     color: #4b0a25;
+
 }
+
+.salvar {
+    background-color: #5c0028;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #5c0028;
+    border-radius: 20px;
+    font-weight: bold;
+   
+}
+
+.salvar:hover{
+    background-color: #f8eef6;
+    color: #5c0028;
+}
+
 
 .pacientes-table {
     width: 100%;

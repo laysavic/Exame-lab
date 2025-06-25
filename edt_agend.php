@@ -47,5 +47,5 @@ $id_pacientes = $conn->query("SELECT id, nome FROM pacientes");
         <option value="Cancelado" <?= $agendamento['status'] == 'Cancelado' ? 'selected' : '' ?>>Cancelado</option>
     </select><br><br>
 
-    <button type="submit">Salvar Alterações</button>
+    <button type="submit" class="salvar">Salvar Alterações</button>
 </form>

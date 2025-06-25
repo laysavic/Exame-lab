@@ -45,5 +45,5 @@ if (!$paciente) {
     <label>Telefone:</label><br>
     <input type="text" name="telefone" value="<?= $paciente['telefone'] ?>">
 
-    <button type="submit">Salvar Alterações</button>
+    <button type="submit" class="salvar">Salvar Alterações</button>
 </form>

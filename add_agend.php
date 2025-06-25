@@ -6,6 +6,7 @@ $pacientes = $conn->query("SELECT id, nome FROM pacientes");
 ?>
 <link rel="stylesheet" href="style.css">
 
+
 <h2 class="title">Novo Agendamento</h2>
 <form method="POST" action="salve_agend.php">
 
@@ -33,5 +34,5 @@ $pacientes = $conn->query("SELECT id, nome FROM pacientes");
         <option value="Cancelado">Cancelado</option>
     </select>
 
-    <button type="submit">Salvar</button>
+    <button type="submit" class="salvar">Salvar</button>
 </form>
