@@ -10,5 +10,4 @@ function conectar(){
         exit;
     }
 }
-
 ?>

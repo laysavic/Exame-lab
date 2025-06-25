@@ -174,264 +174,157 @@ input {
     text-decoration: underline;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-:root {
-    --primary-color: #3A56FF;
-    --light-blue: #EAF1FF;
-    --gray: #f8f9fa;
-    --dark-text: #1f2937;
-    --border: #e0e0e0;
+.title{
+    color: #4b0a25;
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.body-pacientes {
+    font-family: Arial, sans-serif;
+    background-color: #f1dfe3;
+    margin: 20px;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--gray);
-    color: var(--dark-text);
-}
-
-.layout {
-    display: flex;
-    min-height: 100vh;
-}
-
-
-.sidebar {
-    background-color: white;
-    width: 240px;
-    padding: 30px 20px;
-    border-right: 1px solid var(--border);
-}
-
-.sidebar .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-}
-
-.nav-item {
-    display: block;
-    margin-bottom: 16px;
-    color: #555;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.2s;
-}
-
-.nav-item:hover,
-.nav-item.active {
-    background-color: var(--light-blue);
-    color: var(--primary-color);
-}
-
-
-.main-content {
-    flex: 1;
-    padding: 40px;
-}
-
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.header h1 {
-    font-size: 28px;
-}
-
-.logout-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.logout-btn:hover {
-    background-color: #2d44cc;
-}
-
-
-.card {
-    background-color: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    padding: 24px;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead th {
-    text-align: left;
-    padding: 12px;
-    background-color: var(--gray);
-    font-weight: 600;
-}
-
-tbody td {
-    padding: 14px;
-    border-top: 1px solid var(--border);
-}
-
-.btn {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 8px 14px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #2d44cc;
-}
-
-
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-body {
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 20px;
-}
-
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-
-.card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
+.title {
+    color: #6b0934; 
+    text-align: center;
     margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
-
-.card-header {
-    background-color: #007bff;
-    color: white;
-    padding: 16px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card-header h4 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.card-header .btn {
-    background-color: #0056b3;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    color: white;
+.btn-add {
+    display: inline-block;
+    background-color: #5c0028;
+    color: #fff;
+    padding: 10px 18px;
+    margin-bottom: 15px;
     text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #4b0a25;
+    font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #009978;
+.btn-add:hover {
+    background-color: #fff;
+    color: #4b0a25;
 }
 
-
-.card-body {
-    padding: 24px;
-}
-
-
-.table {
+.pacientes-table {
     width: 100%;
     border-collapse: collapse;
+    box-shadow: 0 2px 8px #3e0511;
 }
 
-.table th, .table td {
-    border: 1px solid #dee2e6;
-    padding: 12px;
+.pacientes-table th,
+.pacientes-table td {
+    padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.table th {
-    background-color: #f0f0f0;
-    font-weight: bold;
+.pacientes-table th {
+    background-color: #5c0028;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pacientes-table tr:nth-child(even) {
+    background-color: #ffffff;
 }
 
 
-.btn-sm {
-    padding: 6px 10px;
-    font-size: 14px;
+.pacientes-table td a {
+    text-decoration: none;
+    padding: 6px 12px;
     margin-right: 5px;
     border-radius: 4px;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
 }
 
-.btn-secondary {
-    background-color: #6c757d;
+.btn-edit {
+    background-color: #d5708b; 
+    border: 2px solid #d5708b;
+    
 }
 
-.btn-secondary:hover {
-    background-color: #5a6268;
+.btn-edit:hover {
+    background-color: #ffffff;
+    color: #d5708b;
 }
 
-.btn-success {
-    background-color: #28a745;
+.btn-delete {
+    background-color: #4c1029;
+     border: 2px solid #4c1029;
 }
 
-.btn-success:hover {
-    background-color: #218838;
+.btn-delete:hover {
+    background-color: #8d4e63;
 }
 
-.btn-danger {
-    background-color: #dc3545;
-    border: none;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-}
-
-
-.table td:last-child {
+.dashboard-body {
+    background: #e1b5c4;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.table td form {
-    display: inline;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
 }
 
- */
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.titulo {
+    color: #5c0028;
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    color: #7d3655;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    align-items: center;
+}
+
+.btn-pacientes, .btn-agende {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #541022;
+    width: 220px;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #3e0511;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.btn-pacientes:hover {
+    background-color: #ffffff;
+    color: #3e0511;
+}
+
+.btn-agende:hover{
+    background-color: #ffffff;
+    color: #3e0511;
+}
