@@ -34,7 +34,7 @@ echo "<div class='style'>" . $_SESSION['mensagemSucesso'] . "</div>";
                 <form class="form" action="cadastrar.php" method="POST">
                     <div class="input-cad">
                         <label for="usuario">usuário:</label>
-                        <input type="name" id="usuario" name="usuario"  placeholder="Ex: usuario"   required>
+                        <input type="name" id="usuario" name="name"  placeholder="Ex: usuario"   required>
           
                         <label for="email">e-mail:</label>
                         <input type="email" id="email" name="email"  placeholder="Ex: usuario@gmail.com"   required>
