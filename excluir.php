@@ -14,4 +14,5 @@ $stmt = $conn->prepare($sql);
 $stmt->execute([$id]);
 
 header("Location: register.php");
-exit;
+exit; 
+?>

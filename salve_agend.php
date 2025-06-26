@@ -15,3 +15,5 @@ $stmt->execute([$id_paciente, $tipo_exame, $data, $hora, $status]);
 
 header("Location: agendamentos.php");
 exit;
+?> 
+
