@@ -16,9 +16,11 @@ $agendamento = $stmt->fetch(PDO::FETCH_ASSOC);
 $id_pacientes = $conn->query("SELECT id, nome FROM pacientes");
 ?>
 <link rel="stylesheet" href="style.css">
-
+<body class="fundo">
+<a href="dashboard.php" class="inicio">⬅️Início</a>    
 <h2 class="title">Editar Agendamento</h2>
-<form method="POST" action="atualizar.php">
+<form class="form-agenda" method="POST" action="atualizar.php">
+    
     <input type="hidden" name="tipo" value="editar">
     <input type="hidden" name="id" value="<?= $agendamento['id'] ?>">
 
@@ -49,3 +51,4 @@ $id_pacientes = $conn->query("SELECT id, nome FROM pacientes");
 
     <button type="submit" class="salvar">Salvar Alterações</button>
 </form>
+</body>

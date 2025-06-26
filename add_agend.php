@@ -4,11 +4,14 @@ $conn = conectar();
 
 $pacientes = $conn->query("SELECT id, nome FROM pacientes");
 ?>
+
 <link rel="stylesheet" href="style.css">
 
+<body class="fundo">
 
+<a href="dashboard.php" class="inicio">⬅️Início</a>
 <h2 class="title">Novo Agendamento</h2>
-<form method="POST" action="salve_agend.php">
+<form class= "form-agenda" method="POST" action="salve_agend.php">
 
     <label>Paciente:</label>
     <select name="id_paciente" required>
@@ -17,7 +20,7 @@ $pacientes = $conn->query("SELECT id, nome FROM pacientes");
             <option value="<?= $p['id'] ?>"><?= $p['nome'] ?></option>
         <?php } ?>
     </select>
-<br>
+
     <label>Tipo de Exame:</label>
     <input type="text" name="tipo_exame" required>
 
@@ -36,3 +39,4 @@ $pacientes = $conn->query("SELECT id, nome FROM pacientes");
 
     <button type="submit" class="salvar">Salvar</button>
 </form>
+</body>

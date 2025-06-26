@@ -31,14 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <link rel="stylesheet" href="style.css">
-
-<h2>Adicionar Paciente</h2>
-<form method="POST" action="adicionar.php">
+<body class="fundo">
+    
+<h1>Adicionar Paciente</h1>
+<a href="dashboard.php" class="inicio">⬅️Início</a>
+<form class="form-pacientes" method="POST" action="adicionar.php">
     <label>Nome:</label><br>
     <input type="text" name="nome" required>
 
     <label>Email:</label><br>
-    <input type="email" name="email" required>
+    <input type="email" name="email" class="email" required>
 
     <label>CPF:</label><br>
     <input type="text" name="cpf" maxlength="14" required>
@@ -54,4 +56,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <button type="submit" class="salvar">Salvar</button>
 </form>
+</body>
 

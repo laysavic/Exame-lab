@@ -21,9 +21,11 @@ if (!$paciente) {
 ?>
 
 <link rel="stylesheet" href="style.css">
-
-<h2>Editar Paciente</h2>
-<form method="POST" action="salvar.php">
+<body class="fundo">
+    
+<h1>Editar Paciente</h1>
+<a href="dashboard.php" class="inicio">⬅️Início</a>
+<form class="form-pacientes"  method="POST" action="salvar.php">
     <input type="hidden" name="tipo" value="editar">
     <input type="hidden" name="id" value="<?= $paciente['id'] ?>">
 
@@ -31,19 +33,20 @@ if (!$paciente) {
     <input type="text" name="nome" value="<?= $paciente['nome'] ?>" required>
 
     <label>Email:</label><br>
-    <input type="email" name="email" value="<?= $paciente['email'] ?>">
+    <input type="email" name="email" value="<?= $paciente['email'] ?>" class="email" required>
 
     <label>CPF:</label><br>
-    <input type="text" name="cpf" value="<?= $paciente['cpf'] ?>">
+    <input type="text" name="cpf" value="<?= $paciente['cpf'] ?>"  required>
 
     <label>Data de Nascimento:</label><br>
-    <input type="date" name="data_nascimento" value="<?= $paciente['data_nascimento'] ?>">
+    <input type="date" name="data_nascimento" value="<?= $paciente['data_nascimento'] ?>"  required>
 
     <label>Endereço:</label><br>
-    <input type="text" name="endereco" value="<?= $paciente['endereco'] ?>">
+    <input type="text" name="endereco" value="<?= $paciente['endereco'] ?>"  required>
 
     <label>Telefone:</label><br>
-    <input type="text" name="telefone" value="<?= $paciente['telefone'] ?>">
+    <input type="text" name="telefone" value="<?= $paciente['telefone'] ?>"  required>
 
     <button type="submit" class="salvar">Salvar Alterações</button>
 </form>
+</body>

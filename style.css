@@ -14,21 +14,6 @@ body {
     height: 100vh;
 }
 
-.container02{
-    color: #721c24;
-    padding: 35px;
-}
-
-.style{
-    background-color: #f8d7da; 
-    color: #721c24; 
-    padding: 10px; 
-    border: 1px solid #f5c6cb; 
-    border-radius: 5px; 
-    margin-bottom: 4px;
-}
-
-
 .left-side {
     width: 50%;
     background-size: cover;
@@ -214,13 +199,16 @@ input {
 }
 
 .salvar {
+    display: block;
     background-color: #5c0028;
     color: #ffffff;
-    padding: 10px;
-    width: 100%;
+    margin: 20px auto 0 auto;
+    padding: 12px 40px;
+    width: 70%;
     border: 2px solid #5c0028;
-    border-radius: 20px;
+    border-radius: 30px;
     font-weight: bold;
+    font-size: medium;
    
 }
 
@@ -345,4 +333,126 @@ input {
 .btn-agende:hover{
     background-color: #ffffff;
     color: #3e0511;
+}
+
+.fundo{
+    background-color: #b6537e6c;
+    margin: 0;
+    padding: 0;
+}
+.form-pacientes{
+    background-color: #fff;
+    max-width: 600px;
+    margin: -10px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #7b47471a;
+}
+
+.inicio{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d5708b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #6f436857;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.inicio:hover {
+    background-color: #ffffff;
+    color: #3e0511;
+    transform: translateY(-2px);
+}
+
+.inicio:active {
+    transform: translateY(0);
+}
+
+    
+
+h1{
+    text-align: center;
+    padding: 10px;
+    color: #550e26;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: -5px;
+    font-weight: bold;
+    color: #550e26;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdf2f7;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus {
+    border-color: #550e26;
+    outline: none;
+}
+
+.email{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdf2f7;
+    transition: border-color 0.3s ease;
+}
+
+.form-agenda{
+   
+    max-width: 600px;
+    margin: 53px auto;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #0000001a;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3e0a1d;
+    margin-top: 15px;
+    font-size: large;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdf2f7;
+    transition: border-color 0.3s ease;
+    font-size: large;
+}
+
+input:focus,
+select:focus {
+    border:2px solid #3e0511;
+    outline: none;
 }

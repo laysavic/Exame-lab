@@ -15,6 +15,7 @@ $resultado = $conn->query($sql);
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="body-pacientes" >
+<a href="dashboard.php" class="inicio">⬅️Início</a>
     
 <h2 class=title>Pacientes</h2>
 

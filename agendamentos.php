@@ -17,6 +17,7 @@ $resultado = $conn->query($sql);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h2 class="title">Agendamentos</h2>
 <a href="add_agend.php" class="btn-add" >+ Novo Agendamento</a>
 
